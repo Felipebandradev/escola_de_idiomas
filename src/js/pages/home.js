@@ -6,7 +6,7 @@ import idiomas from "../idiomas.js";
 function renderPage(page) {
   document.body.innerHTML = "";
 
-  const nomeCurso = criandoElemento("div");
+  const nomeCurso = criandoElemento("div", "text-center");
   const h2 = criandoElemento("h2", "", idiomas[page].title);
 
   // Função para adicionar o elemento dentro de outro elemento
@@ -18,7 +18,7 @@ function renderPage(page) {
 
   const cabecalho = criandoMenu();
 
-  const main = criandoElemento("main");
+  const main = criandoElemento("main", "text-center");
   const p = criandoElemento("p", "", idiomas[page].description);
   main.appendChild(p);
 
@@ -48,6 +48,7 @@ function renderPage(page) {
 
 // Controlar mudança de página
 function navigate() {
+  // Hash seria a hashtag #
   const hash = window.location.hash.substring(1);
   const page = hash && idiomas[hash] ? hash : "home";
   renderPage(page);

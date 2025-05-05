@@ -9,7 +9,10 @@ export function criandoElemento(tag, className, textContent) {
 // Função  para criar o navbar de links
 export function criandoNavbar(links) {
   // Criando uma pequena navbar com os botôes
-  const nav = criandoElemento("nav", "margemCima");
+  const nav = criandoElemento(
+    "nav",
+    "margemCima d-inline-flex  flex-wrap justify-content-center p-2"
+  );
 
   links.forEach((idioma) => {
     const link = criandoElemento(
@@ -40,10 +43,15 @@ export function criandoMenu() {
                     <h1>
                     <a class="navbar-brand text-light" href="index.html">LinguaNova</a>
                     </h1>
-                        <button class="navbar-toggler claro text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler claro text-light" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             ${icone}
                         </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link pintaBtn text-light"  href="index.html ">
@@ -82,7 +90,7 @@ export function criandoMenu() {
                     </ul>
                     </div>
                 </div>
-    </nav>
+            </nav>
         
     `;
 

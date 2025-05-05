@@ -1,7 +1,7 @@
 // Informações dos idiomas
 const idiomas = {
   home: {
-    title: "Bem-vindo ao Curso de Idiomas!",
+    title: "Boas Vindas ao Curso de Idiomas!",
     description: "Escolha um idioma para começar sua jornada!",
     links: ["ingles", "frances", "espanhol", "alemao", "italiano", "japones"],
   },
