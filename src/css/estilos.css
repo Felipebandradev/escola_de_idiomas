@@ -1,34 +1,56 @@
+:root {
+  --corPrimaria: #4b0082;
+  --cor-primaria-fundo: #2e0854;
+  --cor-primaria-clara: #6a0dad;
+  --cor-primaria-fundo-hover: #7b1fa2;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #2e0854; /* Roxo escuro */
+  background-color: var(--cor-primaria-fundo); /* Roxo escuro */
   color: white;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-header {
-  background-color: #4b0082;
-  padding: 20px;
+div {
+  & h2 {
+    background-color: var(--corPrimaria);
+    padding: 20px;
+  }
 }
 
-nav {
+.pintarFundo {
+  background-color: var(--cor-primaria-clara);
+}
+
+.claro {
+  color: whitesmoke;
+
+  &:hover {
+    color: whitesmoke;
+  }
+}
+
+.margemCima {
   margin: 20px 0;
 }
 
-nav a {
+.pintaBtn {
   color: white;
   margin: 10px;
   text-decoration: none;
   font-weight: bold;
-  background-color: #6a0dad;
+  background-color: var(--cor-primaria-clara);
   padding: 10px 15px;
   border-radius: 5px;
-}
 
-nav a:hover {
-  background-color: #7b1fa2;
+  &:hover {
+    background-color: var(--cor-primaria-fundo-hover);
+    color: whitesmoke;
+  }
 }
 
 main {
@@ -45,5 +67,5 @@ img {
 footer {
   margin-top: 30px;
   padding: 15px;
-  background-color: #4b0082;
+  background-color: var(--corPrimaria);
 }

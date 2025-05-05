@@ -3,7 +3,7 @@ const idiomas = {
   home: {
     title: "Bem-vindo ao Curso de Idiomas!",
     description: "Escolha um idioma para começar sua jornada!",
-    links: ["ingles", "frances", "espanhol", "alema", "italiano", "japones"],
+    links: ["ingles", "frances", "espanhol", "alemao", "italiano", "japones"],
   },
   ingles: {
     title: "Inglês",
@@ -31,7 +31,7 @@ const idiomas = {
       "https://upload.wikimedia.org/wikipedia/commons/9/9a/Alhambra_Granada_Spain.jpg",
     imgFlag: "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
   },
-  alema: {
+  alemao: {
     title: "Alemão",
     description:
       "O alemão é a língua da engenharia e da inovação na Europa. Conhecê-lo abre portas para oportunidades acadêmicas e profissionais.",

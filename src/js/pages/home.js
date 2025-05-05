@@ -1,4 +1,4 @@
-import { criandoElemento, criandoNavbar } from "../utilitarios.js";
+import { criandoElemento, criandoNavbar, criandoMenu } from "../utilitarios.js";
 
 import idiomas from "../idiomas.js";
 
@@ -6,15 +6,17 @@ import idiomas from "../idiomas.js";
 function renderPage(page) {
   document.body.innerHTML = "";
 
-  const header = criandoElemento("header");
+  const nomeCurso = criandoElemento("div");
   const h2 = criandoElemento("h2", "", idiomas[page].title);
 
   // Função para adicionar o elemento dentro de outro elemento
   // No caso está colocando o <h1></h1> dentro do <header></header>
-  header.appendChild(h2);
+  nomeCurso.appendChild(h2);
 
   // Chamando a função criandoNavbar
   const nav = criandoNavbar(idiomas.home.links);
+
+  const cabecalho = criandoMenu();
 
   const main = criandoElemento("main");
   const p = criandoElemento("p", "", idiomas[page].description);
@@ -33,11 +35,12 @@ function renderPage(page) {
     main.appendChild(imgFlag);
   }
 
-  const footer = criandoElemento("footer");
-  footer.textContent = "© 2024 Curso de Idiomas Exemplo";
+  const footer = criandoElemento("footer", "text-center");
+  footer.textContent = "© 2024 Curso de Idiomas LinguaNova";
 
   // Adicionando os elementos no corpo da página
-  document.body.appendChild(header);
+  document.body.appendChild(cabecalho);
+  document.body.appendChild(nomeCurso);
   document.body.appendChild(nav);
   document.body.appendChild(main);
   document.body.appendChild(footer);

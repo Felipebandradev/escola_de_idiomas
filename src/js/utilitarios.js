@@ -6,14 +6,15 @@ export function criandoElemento(tag, className, textContent) {
   return elemento;
 }
 
+// Função  para criar o navbar de links
 export function criandoNavbar(links) {
   // Criando uma pequena navbar com os botôes
-  const nav = criandoElemento("nav");
+  const nav = criandoElemento("nav", "margemCima");
 
   links.forEach((idioma) => {
     const link = criandoElemento(
       "a",
-      "",
+      "pintaBtn",
       idioma.charAt(0).toUpperCase() + idioma.slice(1)
     );
     link.href = "#" + idioma;
@@ -21,4 +22,69 @@ export function criandoNavbar(links) {
   });
 
   return nav;
+}
+
+// Criando menu de páginas
+export function criandoMenu() {
+  // Criando a tag html
+  const header = criandoElemento("header");
+
+  const icone = `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg>`;
+
+  header.innerHTML = `
+
+            <nav class="navbar navbar-expand-lg pintarFundo">
+                <div class="container-fluid">
+                    <h1>
+                    <a class="navbar-brand text-light" href="index.html">LinguaNova</a>
+                    </h1>
+                        <button class="navbar-toggler claro text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            ${icone}
+                        </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link pintaBtn text-light"  href="index.html ">
+                                HOME
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pintaBtn text-light"  href="cursos.html ">
+                                CURSOS
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pintaBtn text-light"  href="lugares.html ">
+                                LUGARES
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pintaBtn text-light"  href="precos.html ">
+                                PREÇOS
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link pintaBtn text-light"  href="sobre_nos.html
+                        ">SOBRE NÓS</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link pintaBtn text-light"  href="contato.html
+                        ">CONTATO</a>
+                        </li>
+                       
+                    </ul>
+                    </div>
+                </div>
+    </nav>
+        
+    `;
+
+  return header;
 }
