@@ -3,6 +3,7 @@ import {
   criandoNavbar,
   criandoMenu,
   cardProdutos,
+  criarGaleria,
 } from "../utilitarios.js";
 
 // Arrays
@@ -47,13 +48,34 @@ function renderPage(page) {
     main.appendChild(imgFlag);
   }
 
-  // Loja de prodo
-  const titulo = criandoElemento(
+  // Galeria de países
+  const tituloGaleria = criandoElemento(
+    "h2",
+    "text-start m-2 p-2 pintarFundo claro",
+    "Galeria"
+  );
+
+  main.appendChild(tituloGaleria);
+
+  const descGaleria = criandoElemento(
+    "p",
+    "text-sm-center text-wrap fw-semibold",
+    "Veja alguns pontos turísticos"
+  );
+  main.appendChild(descGaleria);
+
+  // Galeria
+  const galeria = criarGaleria();
+
+  main.appendChild(galeria);
+
+  // Loja de produtos
+  const tituloProdutos = criandoElemento(
     "h2",
     "text-start m-2 p-2 pintarFundo claro",
     "Produtos"
   );
-  main.appendChild(titulo);
+  main.appendChild(tituloProdutos);
 
   const descLoja = criandoElemento(
     "p",

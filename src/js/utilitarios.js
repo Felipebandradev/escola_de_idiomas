@@ -67,8 +67,8 @@ export function criandoMenu() {
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pintaBtn text-light"  href="lugares.html ">
-                                LUGARES
+                            <a class="nav-link pintaBtn text-light"  href="galeria.html ">
+                                GALERIA
                             </a>
                         </li>
 
@@ -119,4 +119,36 @@ export function cardProdutos(arrayProdutos) {
   });
 
   return div;
+}
+
+// Criando a galeria
+export function criarGaleria() {
+  // Criando o container
+  const container = criandoElemento("div", "container text-center");
+
+  container.innerHTML = `
+    
+    <div class="row">
+            <div class="col">
+                <img src="src/images/pontosTuristicos/coliseuItalia.jpg" class="" style="width: 100%;" alt="Coliseu da Italia">
+            </div>
+            <div class="col">
+             <img src="src/images/pontosTuristicos/pontoJapao.jpg" class="" style="width: 100%;" alt="cidade do Japao">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <img src="src/images/pontosTuristicos/pontoAlemanha.jpg" class="" style="width: 100%;" alt="cidade da Alamanha">
+            </div>
+            <div class="col">
+            <img src="src/images/pontosTuristicos/torre_bigBang.jpg" class="" style="width: 100%;" alt="torre do Big Bang na Inglaterra">
+            </div>
+            <div class="col">
+            <img src="src/images/pontosTuristicos/torreEfiel.jpg" class="" style="width: 100%;" alt="Torre efiel da França">
+            </div>
+        </div>  
+  
+  `;
+
+  return container;
 }
