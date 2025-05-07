@@ -41,7 +41,8 @@ export function criandoMenu() {
             <nav class="navbar navbar-expand-lg pintarFundo">
                 <div class="container-fluid">
                     <h1>
-                    <a class="navbar-brand text-light" href="index.html">LinguaNova</a>
+                    <a class="navbar-brand text-light" href="index.html">
+                        <img class=" iconLogo" src="src/images/favicon.png" alt="LogoKinguaNova">LinguaNova</a>
                     </h1>
                         <button class="navbar-toggler claro text-light" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             ${icone}
@@ -72,8 +73,8 @@ export function criandoMenu() {
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link pintaBtn text-light"  href="precos.html ">
-                                PREÇOS
+                            <a class="nav-link pintaBtn text-light"  href="loja.html ">
+                                LOJA
                             </a>
                         </li>
 
@@ -95,4 +96,27 @@ export function criandoMenu() {
     `;
 
   return header;
+}
+
+//  Criação dos Cards de produtos
+
+export function cardProdutos(arrayProdutos) {
+  // Criando o conteiner onde serão inseridos os card
+
+  const div = criandoElemento("div", "d-flex justify-content-around flex-wrap");
+
+  // Criação e injerção dos cards
+
+  arrayProdutos.map((produto) => {
+    div.innerHTML += `
+            <div class="card p-2">
+                <img src=${produto.foto} class="card-img-top" alt=${produto.descImg}>
+                <div class="card-body">
+                    <p class="card-text"> ${produto.descricao}</p>
+                </div>
+            </div>
+        `;
+  });
+
+  return div;
 }

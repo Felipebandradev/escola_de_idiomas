@@ -6,19 +6,27 @@
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: var(--cor-primaria-fundo); /* Roxo escuro */
-  color: white;
+  background-color: whitesmoke;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+}
+
+.iconLogo {
+  width: 50px;
+  height: 50px;
 }
 
 div {
   & h2 {
     background-color: var(--corPrimaria);
     padding: 20px;
+    color: white;
   }
 }
 
@@ -68,4 +76,18 @@ footer {
   margin-top: 30px;
   padding: 15px;
   background-color: var(--corPrimaria);
+  color: white;
+}
+
+.card {
+  max-width: 350px;
+}
+
+/* Media Querys para controlar o tamanho de tela */
+@media screen and (min-width: 700px) {
+  .iconLogo {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+  }
 }

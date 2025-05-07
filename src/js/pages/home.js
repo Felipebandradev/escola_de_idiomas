@@ -1,6 +1,13 @@
-import { criandoElemento, criandoNavbar, criandoMenu } from "../utilitarios.js";
+import {
+  criandoElemento,
+  criandoNavbar,
+  criandoMenu,
+  cardProdutos,
+} from "../utilitarios.js";
 
-import idiomas from "../idiomas.js";
+// Arrays
+import idiomas from "../arrays/idiomas.js";
+import { produtos } from "../arrays/produtos.js";
 
 // Função para desenhar a página
 function renderPage(page) {
@@ -19,7 +26,12 @@ function renderPage(page) {
   const cabecalho = criandoMenu();
 
   const main = criandoElemento("main", "text-center");
-  const p = criandoElemento("p", "", idiomas[page].description);
+
+  const p = criandoElemento(
+    "p",
+    "text-wrap fw-semibold",
+    idiomas[page].description
+  );
   main.appendChild(p);
 
   if (page !== "home") {
@@ -34,6 +46,26 @@ function renderPage(page) {
     main.appendChild(imgTour);
     main.appendChild(imgFlag);
   }
+
+  // Loja de prodo
+  const titulo = criandoElemento(
+    "h2",
+    "text-start m-2 p-2 pintarFundo claro",
+    "Produtos"
+  );
+  main.appendChild(titulo);
+
+  const descLoja = criandoElemento(
+    "p",
+    "text-sm-start text-wrap",
+    "Conheça alguns dos nossos produtos"
+  );
+
+  main.appendChild(descLoja);
+
+  const card = cardProdutos(produtos);
+
+  main.appendChild(card);
 
   const footer = criandoElemento("footer", "text-center");
   footer.textContent = "© 2024 Curso de Idiomas LinguaNova";
