@@ -5,6 +5,10 @@
   --cor-primaria-fundo-hover: #7b1fa2;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: whitesmoke;
