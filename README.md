@@ -2,8 +2,7 @@
 
 Com a utilizaçao de alguns elementos básicos
 
-Alunos: Felipe Barbosa Brito
-Alunos: Isadelly Freitas
+Aluno: Felipe Barbosa Brito
 
 Para utilizar esse projeto será necessário os
 seguintes recursos:
